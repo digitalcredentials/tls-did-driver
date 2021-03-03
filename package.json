@@ -1,0 +1,25 @@
+{
+  "name": "tls-did-driver",
+  "version": "0.0.1",
+  "description": "A driver to resolve TLS-DIDs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalcredentials/tls-did-driver.git"
+  },
+  "author": "Kilian Käslin <kilian.kaeslin@tum.de>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/digitalcredentials/tls-did-driver/issues"
+  },
+  "homepage": "https://github.com/digitalcredentials/tls-did-driver#readme",
+  "dependencies": {
+    "@digitalcredentials/tls-did-resolver": "^0.2.3",
+    "did-resolver": "^2.2.0",
+    "express": "^4.17.1"
+  }
+}
