@@ -8,8 +8,8 @@ const port = 8080;
 const app = express();
 
 // Did resolver config
-const jsonRpcUrl = 'http://localhost:8545'; // local testnet
-REGISTRY = '0xa725a297b0f81c502df772dbe2d0aeb68788679d'; // testnet tls registry
+const jsonRpcUrl = 'https://goerli.infura.io/v3/923dab15302f45aba7158692f117ac0c'; // goerli testnet
+REGISTRY = '0x60492b0755D8dba01dB9915a1f8Bf28D242BF6dC'; // goerli tls-did registry
 
 // Resolver instantiation
 const tlsResolver = tls.getResolver(
