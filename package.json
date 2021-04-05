@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/digitalcredentials/tls-did-driver#readme",
   "dependencies": {
-    "@digitalcredentials/tls-did-resolver": "^0.2.3",
+    "@digitalcredentials/tls-did-resolver": "^0.4.1",
+    "@digitalcredentials/tls-did-utils": "^0.1.1",
     "did-resolver": "^2.2.0",
     "express": "^4.17.1"
   }

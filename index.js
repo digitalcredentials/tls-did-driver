@@ -1,5 +1,6 @@
 const express = require('express');
 const tls = require('@digitalcredentials/tls-did-resolver');
+const { REGISTRY } = require('@digitalcredentials/tls-did-utils');
 const { Resolver } = require('did-resolver');
 const { rootCertificates } = require('tls');
 
@@ -8,8 +9,8 @@ const port = 8080;
 const app = express();
 
 // Did resolver config
-const jsonRpcUrl = 'https://goerli.infura.io/v3/923dab15302f45aba7158692f117ac0c'; // goerli testnet
-REGISTRY = '0x60492b0755D8dba01dB9915a1f8Bf28D242BF6dC'; // goerli tls-did registry
+const jsonRpcUrl =
+  'https://goerli.infura.io/v3/923dab15302f45aba7158692f117ac0c'; // goerli testnet
 
 // Resolver instantiation
 const tlsResolver = tls.getResolver(
@@ -30,7 +31,9 @@ app.get('/1.0/identifiers/:did', async (req, res) => {
   } catch (err) {
     console.error(err);
     if (
-      err.message.match(/(Unsupported DID method:)|(Invalid DID)|(contracts were found.)/)
+      err.message.match(
+        /(Unsupported DID method:)|(Invalid DID)|(contracts were found.)/
+      )
     ) {
       res.status(400).send(err.toString());
     } else {
